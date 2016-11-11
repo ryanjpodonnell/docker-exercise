@@ -19,8 +19,7 @@ RUN mkdir -p /usr/src/app
 ADD . /usr/src/app
 WORKDIR /usr/src/app
 
-RUN gem install bundler --no-ri --no-rdoc
-RUN bundle install
+RUN gem install bundler --no-ri --no-rdoc && bundle install
 
 EXPOSE 3000
 
