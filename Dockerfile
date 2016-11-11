@@ -1,14 +1,14 @@
 FROM alpine:3.4
 
 RUN apk upgrade && apk add --update ruby-dev \
-																		ca-certificates \
-																		ruby-io-console \
-																		ruby-json \
-																		ruby-bigdecimal \
+                                    ca-certificates \
+                                    ruby-io-console \
+                                    ruby-json \
+                                    ruby-bigdecimal \
                                     ruby-irb \
                                     tzdata \
                                     build-base \
-																		openssh \
+                                    openssh \
                                     libffi-dev \
                                     libxml2-dev \
                                     linux-headers \
