@@ -1,5 +1,5 @@
 class CustomController < ApplicationController
   def heartbeat
-    render plain: "doki doki"
+    render inline: "doki doki"
   end
 end
