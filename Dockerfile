@@ -23,4 +23,4 @@ RUN gem install bundler --no-ri --no-rdoc && bundle install
 
 EXPOSE 3000
 
-ENTRYPOINT bundle exec rails s
+ENTRYPOINT bundle exec rails s -b 0.0.0.0
