@@ -1,0 +1,24 @@
+---
+name: "docker-exercise"
+maintainer: ryan.odonnell@braintreepayments.com
+instances: 1
+instance_type: "t2.small"
+services:
+  rails:
+    image: "dockerhub.braintree.tools/rod/rails"
+    ports:
+      - number: 3000
+        protocol: "tcp"
+    env:
+      default_from_yaml: defaulted
+load_balancers:
+  public:
+    listeners:
+      - frontend_port: 80
+        frontend_protocol: "http"
+        backend_port: 3000
+        backend_protocol: "http"
+    health_check:
+      protocol: "http"
+      path: "/heartbeat"
+      port: 3000
